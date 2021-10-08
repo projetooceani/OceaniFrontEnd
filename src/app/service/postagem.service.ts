@@ -32,7 +32,7 @@ export class PostagemService {
   }
 
   deletePostagem(id: number){
-    return this.http.delete('https://oceani.herokuapp.com/postagem', this.token)
+    return this.http.delete(`https://oceani.herokuapp.com/postagem/${id}`, this.token)
   }
 
 }
