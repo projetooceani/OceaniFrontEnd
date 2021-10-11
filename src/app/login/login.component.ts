@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(){
     window.scroll(0,0)
+    this.auth.refreshToken();
   }
 
   entrar() {

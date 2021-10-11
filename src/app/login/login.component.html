@@ -1,36 +1,40 @@
 <div class="container-fluid">
-
-    <div class="row d-flex align-items-center">
-
-        <div class="col-md-6">
-
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
-                    <h1 class="text-center mb-3">Login</h1>
-
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input [(ngModel)]="usuarioLogin.usuario" class="form-control" type="text" name="usuario" id="usuario"
-                            placeholder="nome@example.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input [(ngModel)]="usuarioLogin.senha" class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-info" (click)="entrar()">Entrar</button>
-                    </div>
-
-                    <hr class="mt-5 mb-5">
-
-                    <p class="text-center">
-                        Não tem uma conta? <a routerLink='/cadastrar'>Cadastre-se</a>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-6" id="img-bg"></div>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Entrar</h3>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input [(ngModel)]="usuarioLogin.usuario" type="text" class="form-control" name="usuario" id="usuario" placeholder="nome@example.com">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input [(ngModel)]="usuarioLogin.senha" type="password" class="form-control"  name="senha" id="senha" placeholder="Sua senha">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Lembrar
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn float-right login_btn" (click)="entrar()">Entrar</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Não tem uma conta?<a routerLink='/cadastrar'>Cadastre-se</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Esqueceu a senha ?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
