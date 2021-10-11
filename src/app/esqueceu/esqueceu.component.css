@@ -1,12 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css?family=Numans');
-
 .container-fluid{
 background-image: url('https://i.imgur.com/E0Os5p1.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
-font-family: 'Numans', sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
