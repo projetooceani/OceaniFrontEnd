@@ -4,4 +4,8 @@
 
 .fundo{
   background-image: url(https://i.imgur.com/E0Os5p1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }  
