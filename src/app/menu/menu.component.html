@@ -2,11 +2,15 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        
+    <div class="row col-12 collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="col-md-2 navbar-nav mr-auto d-flex justify-content-end ml-5">
+        <li>
+          <a href="#">
+            <img src="https://i.imgur.com/D3jhYDa.png" alt="logo-menu" id="logo-menu">
+          </a>
+        </li>
       </ul>
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <ul class="col-md-1 navbar-nav ml-auto d-flex align-items-center">
         <a class="m-0 font-weight-bold text-white fs-16" (click)="sair()">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
       </ul>
     </div>
