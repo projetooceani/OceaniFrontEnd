@@ -17,6 +17,9 @@ import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { EsqueceuComponent } from './esqueceu/esqueceu.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import {OrderModule} from "ngx-order-pipe";
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -33,14 +36,17 @@ import { EsqueceuComponent } from './esqueceu/esqueceu.component';
     TemaEditComponent,
     PostagemDeleteComponent,
     TemaDeleteComponent,
-    EsqueceuComponent
+    EsqueceuComponent,
+    UsuarioComponent,
+    UsuarioEditComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        OrderModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

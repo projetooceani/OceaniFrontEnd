@@ -1,0 +1,64 @@
+
+
+<div style="height: 50vh; margin-bottom: 100px;"
+    class="container-fluid fundo d-flex align-items-end justify-content-end">
+    <button [routerLink]="['/usuario-edit', idUser]" style="color: white;" class="btn btn-warning btn-lg m-3">Editar
+        Usuário</button>
+    <img style="position: absolute; right: 0; left: 0; bottom: 0; top: 0; margin: auto;" width="200" src="{{foto}}"
+        class="img-fluid rounded-circle" alt="Imagem do usuario logado">
+</div>
+
+
+<div class="container d-flex justify-content-center mb-3">
+    <a href="#"> <i class="fab fa-linkedin m-5" style="font-size: 50px;"></i> </a>
+    <a href="#"><i class="fa fa-github-alt m-5" style="font-size: 50px;"></i></a>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10  shadow-lg mb-3 p-3 rounded" *ngFor='let item of postagem | orderBy : key : reverse'>
+            <div class="row d-flex align-items-center">
+                <div class="col-12">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-2">
+                            <img src="{{foto}}" class="img-fluid rounded-circle m-3" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <p class="m-0"> {{nome}} </p>
+                            <small>
+                                postado em: {{item.data | date : 'dd/MM/yyy'}} às {{item.data | date : 'HH'}} hrs
+                            </small>
+                        </div>
+
+                        <div class="col-md-2 f-22pt">
+                            <a [routerLink]="['/postagem-edit', item.id]" class="text-info" href=""><i
+                                    class="far fa-edit mr-3"></i></a>
+                            <a [routerLink]="['/postagem-delete', item.id]" class="text-danger " href=""><i
+                                    class="far fa-trash-alt"></i></a>
+                        </div>
+
+                    </div>
+                    <h3 class="text-center mb-3">titulo</h3>
+                    <p>texto
+                    </p>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-6 ">
+                            <img class="img-fluid" src="{{foto}}" alt="foto da postagem">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-around align-items-center">
+                        <div>
+                            <a href="">
+                                <img class="img" height="30" src="../../assets/img/gostar.png" alt="Like">
+                            </a>
+                        </div>
+                        <div>
+                            <a class="btn btn-success">Comentar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

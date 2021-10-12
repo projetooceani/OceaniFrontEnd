@@ -25,6 +25,9 @@ export class InicioComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
+  nome: string = environment.nome;
+  foto: string = environment.foto;
+
   constructor(
     private router: Router,
     private temaService: TemaService,

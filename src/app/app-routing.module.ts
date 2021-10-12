@@ -6,11 +6,13 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { EsqueceuComponent } from './esqueceu/esqueceu.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { OceaniComponent } from './oceani/oceani.component';
 import { TemaComponent } from './tema/tema.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 const routes: Routes = [
@@ -24,7 +26,9 @@ const routes: Routes = [
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
-  {path: 'esqueceu', component: EsqueceuComponent}
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent},
+  {path: 'esqueceu', component: EsqueceuComponent},
+  {path: 'usuario', component: UsuarioComponent}
 ];
 
 @NgModule({
