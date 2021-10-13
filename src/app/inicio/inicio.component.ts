@@ -85,5 +85,20 @@ export class InicioComponent implements OnInit {
       this.getAllPostagens()
     })
   }
+  findByIdPostagem(id: number){
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem)=>{
+      this.postagem = resp
+    })
+  }
 
+  curtida(id : number){
+    this.postagemService.putCurtir(id).subscribe(()=>{
+    this.getAllPostagens();
+    })
+  }
+  descurtida(id : number){
+    this.postagemService.putDescurtir(id).subscribe(()=>{
+    this.getAllPostagens();
+    })
+  }
 }

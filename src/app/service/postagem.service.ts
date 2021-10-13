@@ -34,5 +34,10 @@ export class PostagemService {
   deletePostagem(id: number){
     return this.http.delete(`https://oceani.herokuapp.com/postagem/${id}`, this.token)
   }
-
+  putCurtir(id: number): Observable<Postagem>{
+    return this.http.put<Postagem>(`https://oceani.herokuapp.com/postagem/curtir/${id}`, this.token)
+  }
+  putDescurtir(id: number): Observable<Postagem>{
+    return this.http.put<Postagem>(`https://oceani.herokuapp.com/postagem/descurtir/${id}`, this.token)
+  }
 }
