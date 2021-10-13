@@ -52,6 +52,8 @@ img{
 /* Menu Principal */
 
     
+ 
+
   .mainMenu li > a {
     font-size: 14px;
     letter-spacing: 1px;
@@ -114,6 +116,8 @@ img{
     width: 100%;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    
+
   }
   
   .main-header.fixed-nav {
@@ -274,6 +278,11 @@ img{
 
 
 /*sobre nos*/
+
+.sobreNos{
+  background-color: #a2d9ff;
+  color: #000;
+}
 
 .row.heading h2 {
     color: #777;
