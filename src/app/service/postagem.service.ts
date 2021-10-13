@@ -14,7 +14,7 @@ export class PostagemService {
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
-
+  
   getAllPostagens(): Observable<Postagem[]>{
     return this.http.get<Postagem[]>('https://oceani.herokuapp.com/postagem', this.token)
   }

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row bg-secondary">
+  <div class="row bg-info">
     <div class="col-md-12 text-white">
       <a routerLink="/inicio" class="text-white text-left">
         <i class="fa fa-angle-double-left" aria-hidden="true"></i> início
@@ -14,11 +14,9 @@
             <input type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema" [(ngModel)]="tema.descricao"  >
           </div>
           <div class="form-group">
-            <label for="categoria">categoria</label>
             <input type="text" class="form-control" id="categoria" placeholder="Digite a categoria" [(ngModel)]="tema.categoria">
         </div>
         <div class="form-group">
-            <label for="keywords">keywords</label>
             <input type="text" class="form-control" id="keywords" placeholder="Digite a keywords" [(ngModel)]="tema.keywords">
         </div>
           <div class="d-flex justify-content-center">
