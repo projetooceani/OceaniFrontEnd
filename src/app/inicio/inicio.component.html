@@ -43,7 +43,7 @@
               <hr>
               <div class="d-flex justify-content-around align-items-center">
                 <div>
-                  <button class="btn"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                  <button class="btn" (click)='findByIdPostagem(item.id)' (click)='curtida(item.id)'><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
                   <p>{{item.curtida}}</p>
                 </div>
                 <div>
