@@ -28,6 +28,10 @@ export class AuthService {
     return this.http.post<Usuario>('https://oceani.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
+  alterar(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>('https://oceani.herokuapp.com/usuarios/alterar', usuario)
+  }
+
   getUserById(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`https://oceani.herokuapp.com/usuarios/${id}`, this.token)
   }
