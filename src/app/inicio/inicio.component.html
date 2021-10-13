@@ -15,28 +15,48 @@
       <div class="row">
         <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
           <div class="form-group">
-            <select class="form-control my-1" name="pesquisarTema" id="pesquisarTema">
-              <option>Pesquisar publicações por tema</option>
-              <option value="">tema 1</option>
-              <option value="">tema 2</option>
-            </select>
+            <button class="btn btn-success btn-block " data-toggle="modal" data-target="#novaPostagem">Nova
+              Postagem</button>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
-          Postagens
+        <div class="col-md-12 shadow-lg mb-3 p-3 rounded dark2" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+          <div class="row d-flex align-items-center">
+            <div class="col-12">
+              <div class="row d-flex align-items-center">
+                <div class="col-2">
+                  <img src="{{item.usuario.foto}}" class="img-fluid rounded-circle m-3"
+                       alt="...">
+                </div>
+                <div class="col-10">
+                  <p class="m-0 "><a  [routerLink]="['/perfil-usuario', item.usuario.id]">{{item.usuario.nome}}</a></p>
+                  <small class="text-muted">
+                    postado em: {{item.data | date : 'dd/MM/yyy'}} às {{item.data | date : 'HH'}} hrs
+                  </small>
+                </div>
+              </div>
+              <h3 class="text-center mb-3">{{item.titulo}}</h3>
+              <p>{{item.texto}}
+              </p>
+              <img class="img-fluid img-d-block" src="{{item.foto}}" alt="foto da postagem">
+              <hr>
+              <div class="d-flex justify-content-around align-items-center">
+                <div>
+                  <a>
+                    <i class="dark2 like far fa-thumbs-up"></i>
+                  </a>
+                </div>
+                <div>
+                  <a class="btn btn-success">Comentar</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2">
-      <div class="row">
-        <div class="col-md-12 p-3">
-          <button class="btn btn-success btn-block " data-toggle="modal" data-target="#novaPostagem">Nova
-            Postagem</button>
-        </div>
-      </div>
-    </div>
+
   </div>
 
   <div class="modal" tabindex="-1">
@@ -60,6 +80,8 @@
   </div>
 
   <!-- Modal -->
+
+  <!--
   <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -94,8 +116,8 @@
     </div>
   </div>
 
-<!-- Modal -->
-<!-- 
+Modal -->
+
 
   <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
   aria-hidden="true">
@@ -117,6 +139,10 @@
           <textarea class="form-control" name="texto" id="texto" rows="3" [(ngModel)]="postagem.texto"></textarea>
         </div>
         <div class="form-group">
+          <label for="imagem">imagem</label>
+          <input [(ngModel)]="foto" type="text" class="form-control" id="imagem" placeholder="Insira o link da imagem">
+        </div>
+        <div class="form-group">
           <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um novo</a>:</label>
           <select class="form-control" name="tema" id="tema" (change)='findByIdTema()' [(ngModel)]="idTema">
             <option *ngFor='let tema of listaTemas' value="{{tema.id}}">{{tema.descricao}}</option>
@@ -129,6 +155,5 @@
       </div>
     </div>
   </div>
-</div>
--->
+
 <!-- Posts -->

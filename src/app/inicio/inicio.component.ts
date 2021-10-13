@@ -28,6 +28,9 @@ export class InicioComponent implements OnInit {
   nome: string = environment.nome;
   foto: string = environment.foto;
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private temaService: TemaService,
