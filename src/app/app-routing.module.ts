@@ -11,6 +11,7 @@ import { EsqueceuComponent } from './esqueceu/esqueceu.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { OceaniComponent } from './oceani/oceani.component';
+import { OngsComponent } from './ongs/ongs.component';
 import { TemaComponent } from './tema/tema.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'postagem-delete/:id', component: PostagemDeleteComponent},
   {path: 'usuario-edit/:id', component: UsuarioEditComponent},
   {path: 'esqueceu', component: EsqueceuComponent},
-  {path: 'usuario', component: UsuarioComponent}
+  {path: 'usuario', component: UsuarioComponent},
+  {path: 'ongs', component: OngsComponent}
 ];
 
 @NgModule({

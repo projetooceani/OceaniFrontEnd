@@ -20,6 +20,7 @@ import { EsqueceuComponent } from './esqueceu/esqueceu.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import {OrderModule} from "ngx-order-pipe";
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { OngsComponent } from './ongs/ongs.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     TemaDeleteComponent,
     EsqueceuComponent,
     UsuarioComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    OngsComponent
   ],
     imports: [
         BrowserModule,

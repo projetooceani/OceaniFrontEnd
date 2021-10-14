@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import {Usuario} from "../model/Usuario";
 
 @Component({
   selector: 'app-usuario',
@@ -23,6 +24,8 @@ export class UsuarioComponent implements OnInit {
 
   idUser = environment.id
   nome: string = environment.nome;
+  usuario: Usuario = new Usuario()
+  iduser = environment.id
 
   constructor(
     private authService: AuthService,
@@ -41,4 +44,9 @@ export class UsuarioComponent implements OnInit {
     this.idUsuario = this.route.snapshot.params['id']
   }
 
+  findUserById(){
+    this.authService.getUserById(this.iduser).subscribe((resp: Usuario)=> {
+      this.usuario = resp
+    })
+  }
 }
