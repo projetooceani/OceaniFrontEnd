@@ -29,7 +29,7 @@ export class AuthService {
   }
 
   alterar(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('https://oceani.herokuapp.com/usuarios/alterar', usuario)
+    return this.http.put<Usuario>('https://oceani.herokuapp.com/usuarios/alterar', usuario, this.token)
   }
 
   getUserById(id: number): Observable<Usuario>{

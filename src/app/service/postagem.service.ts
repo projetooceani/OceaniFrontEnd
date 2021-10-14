@@ -15,6 +15,13 @@ export class PostagemService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
   
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    };
+  }
+
+
   getAllPostagens(): Observable<Postagem[]>{
     return this.http.get<Postagem[]>('https://oceani.herokuapp.com/postagem', this.token)
   }
@@ -36,8 +43,5 @@ export class PostagemService {
   }
   putCurtir(id: number): Observable<Postagem>{
     return this.http.put<Postagem>(`https://oceani.herokuapp.com/postagem/curtir/${id}`, this.token)
-  }
-  putDescurtir(id: number): Observable<Postagem>{
-    return this.http.put<Postagem>(`https://oceani.herokuapp.com/postagem/descurtir/${id}`, this.token)
   }
 }
