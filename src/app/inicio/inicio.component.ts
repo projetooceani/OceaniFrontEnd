@@ -44,6 +44,7 @@ export class InicioComponent implements OnInit {
     this.auth.refreshToken();
     this.getAllTemas();
     this.getAllPostagens();
+    this.postagemService.refreshToken();
   }
 
   getAllTemas(){
@@ -96,9 +97,5 @@ export class InicioComponent implements OnInit {
     this.getAllPostagens();
     })
   }
-  descurtida(id : number){
-    this.postagemService.putDescurtir(id).subscribe(()=>{
-    this.getAllPostagens();
-    })
-  }
+ 
 }

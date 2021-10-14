@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
       environment.tipo = this.usuarioLogin.tipo
       environment.foto = this.usuarioLogin.foto
 
+
       this.router.navigate(['/inicio'])
     }, erro => {
       if (erro.status == 401) {
