@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
 }
 
 sair(){
-  this.router.navigate(['/login'])
+  this.router.navigate(['/oceani'])
   environment.token = ''
   environment.id = 0
   environment.foto = ''
